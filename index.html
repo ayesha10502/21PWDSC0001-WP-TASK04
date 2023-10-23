@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing Page</title>
+       
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            
+           
+            body{
+                background-color: rgba(248,240,237,255);
+                
+            }
+            nav{
+                background-color:  rgba(248,240,237,255);
+                width: 100%;
+                height: 90px;
+                position: absolute;
+                border-color: 1px solid red;
+                display: flex;
+                top: 0;      
+            }
+            nav ul {
+                float: right;
+                display: flex;
+                list-style: none;
+                
+                
+            }
+            nav ul li a{
+                color: black;
+                line-height: 60px;
+                padding: 30px 30px;
+                font-size: 16px;
+                text-decoration: none;
+                margin-right: 20px;
+            
+            }
+            nav ul li a:hover {
+                background-color: red;
+            }
+            .bg{
+               
+                margin-left: 0;
+                height: 100%;
+                
+            }
+            .image{
+                float: right;
+
+            }
+           .bg h1{
+                margin: 100px;
+                font-size: 75px;
+                text-align: left;
+                margin-bottom: 30px;
+            }
+            .bg p{
+                text-align: center;
+                font-size: 20px;
+            }
+            .button{
+                background-color: black;
+                color: white;
+                text-decoration: none;
+                border: 2px solid transparent;
+                font-weight: bold;
+                padding: 13px 30px;
+                 border-radius: 20px;
+                transition: .4s;
+            }
+            h1{
+                text-align: center;
+                font-size: 40px;
+                margin: 30vh auto;
+
+            }
+            h1::before{
+                content: "";
+                height: 2px;
+                width: 400px;
+                margin-left: 55px;
+                background-color: #000;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                top: 740px;
+            }
+            *{
+                box-sizing: border-box; 
+                border-radius: 30px;
+            }
+          .column{
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+            border-radius: 40px;
+
+          }
+          .row::after{
+            content: "";
+            display: table;
+            clear: both;
+          }
+       
+           
+           h2{
+            text-align: center;
+            font-size: 40px;
+            margin: 30vh auto;
+            margin-top: 50px;
+        }
+        h2::before{
+            content: "";
+            height: 2px;
+            width: 400px;
+            margin-left: 85px;
+            background-color: #000;
+            position: absolute;
+            left: 0;
+            top: 285%;
+        }
+        h2::after{
+            content: "";
+            height: 2px;
+            width: 400px;
+            margin-right: 40px;
+            background-color: #000;
+            position: absolute;
+            right: 50px;
+            top: 285%;
+        }
+        
+        .pic{
+           float: right;
+           
+        }
+        h2, .pic{
+            margin: 0;
+            padding: 15px;
+        }
+        .about p{
+            text-align: center;
+            font-size: 20px;
+        }
+        h4{
+            text-align: center;
+            font-size: 40px;
+            margin: 30vh auto;
+
+        }
+        h4::before{
+                content: "";
+                height: 2px;
+                width: 400px;
+                margin-right: 55px;
+                background-color: #000;
+                position: absolute;
+                left: 50px;
+                top: 416%;
+            }
+            h4::after{
+                content: "";
+                height: 2px;
+                width: 400px;
+                margin-left: 55px;
+                background-color: #000;
+                position: absolute;
+                right: 50px;
+                top: 416%;
+            }
+            .services{
+                background: #101010;
+                width: 100%;
+                padding: 100px 0px;
+            }
+            
+            .box{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 400px;
+                float: left;
+                margin-top: -10%;
+                padding: 20px;
+            }
+            .card{
+                height: 365px;
+                width: 335px;
+                padding: 20px 35px;
+                
+                border-radius: 20px;
+                margin: 15px;
+                position: relative;
+                overflow: hidden;
+                text-align: center;
+            }
+            .card i {
+                font-size: 50px;
+                display: block;
+                text-align: center;
+                margin: 25px 0px;
+                color: black;
+            }
+            h5{
+                color: black;
+                font-size: 23px;
+                margin-bottom: 15px;
+            }
+            .pra p{
+                color: black;
+                font-size: 16px;
+                line-height: 27px;
+                margin-bottom: 25px ;
+            }
+           h3{
+            font-size: 40px;
+            text-align: center;
+           }
+           h3::after{
+            content: "";
+            height: 2px;
+            width: 400px;
+            margin-left: 55px;
+            background-color: #000;
+            position: absolute;
+            right: 80px;
+            top: 567%;
+        }
+        
+        .container{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            padding: 20px 100px;
+            
+        }
+        .container:after{
+            
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .contact-box{
+            max-width: 850px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .left{
+            height: 100%;
+
+        }
+        .right{
+            padding: 25px 40px;
+        }
+        .field{
+            width: 100%;
+            padding: 0.5rem 1rem;
+            outline: none;
+            border: 2px solid rgba(0,0,0,0);
+            background-color: rgba(230,230,230,0.6);
+            font-size: 1.1rem;
+            margin-bottom: 22px;
+            transition: .3s;
+        }
+        .field:hover{
+            background-color: rgba(0,0,0,0.1);
+        }
+        .field:focus{
+            background-color: #fff;
+            border: 2px soild rgba(30,85,250,0.47);
+        }
+        .btn{
+            width: 15%;
+            padding: 0.5rem 1rem;
+            font-size: 1.1rem;
+            background-color: black;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            color: white;
+        }
+        footer{
+            position: relative;
+            bottom: 0;
+            background-color: rgba(222,203,197,255);
+
+    
+        }
+        .footer-distributed{
+            
+            box-sizing: border-box;
+            widows: 100%;
+            text-align: left;
+            font: bold 16px;
+            padding: 50px 50px 60px 50px;
+            margin-top: 80;
+        }
+        .footer-distributed .footer-left .footer-distributed .footer-center .footer-distributed .footer-right{
+            display: inline-block;
+            vertical-align: top;
+        }
+        .footer-distributed .footer-left{
+            width: 30%;
+        }
+        .footer-distributed h6{
+            color: black;
+            font: normal 36px 'cookie', cursive;
+            margin: 0;
+        }
+        .footer-distributed h6 span{
+            color: black;
+        }
+        .footer-distributed .footer-links{
+            color: black;
+            margin: 20px 0 12px;
+        }
+        .footer-distributed .footer-links a{
+            display: inline-block;
+            line-height: 1.8;
+            text-decoration: none;
+            color: inherit;
+        }
+        .footer-distributed .footer-brand-name{
+            color: black;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0;
+        }
+        .footer-distributed .footer-center {
+            width: 35%;
+        }
+        .footer-distributed .footer-center i{
+            background-color: white;
+            color: black;
+            font-size: 25px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 42px;
+            margin: 10px 15px;
+            vertical-align: middle;
+        }
+        .footer-distributed .footer-center i.fa-envelope{
+            font-size: 16px;
+            line-height: 38px;
+        }
+        .footer-distributed .footer-center p{
+            display: inline-block;
+            color: black;
+            vertical-align: middle;
+            margin: 0;
+        }
+        .footer-distributed .footer-center p span{
+            display: block;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 2;
+        }
+        .footer-distributed .footer-center p a{
+            color: black;
+            text-decoration: none;
+        }
+        .footer-distributed .footer-right{
+            width: 30%;
+        }
+       
+        .footer-distributed .footer-brand-about{
+            line-height: 20px;
+            color: black;
+            font-size: 13px;
+            font-weight: normal;
+            margin: 0;
+        }
+        .footer-distributed .footer-brand-about span{
+            display: block;
+            color: black;
+            font-size: 1px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .footer-distributed .footer-icon{
+            margin-top: 25px;
+        }
+        .footer-distributed .footer-icon a{
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            background-color: white;
+            border-radius: 2px;
+            font-size: 20px;
+            color: black;
+            text-align: center;
+            line-height: 35px;
+            margin-right: 3px;
+            margin-bottom: 5px;
+        }  
+          
+        </style>
+    </head>
+    <body>
+
+        <section>
+        <nav>
+            <img src="Logo.png" alt="Logo" width="150px" height="100px" class="logo">
+
+            <ul>
+                <li><a  href="#Home">Home</a></li>
+                <li><a href="#Our Products">Our Products</a></li>
+                <li><a href="#About Us">About Us</a></li>
+                <li><a href="#Our Services">Our Services</a></li>
+                <li><a  href="#Contact Us">Contact Us</a></li>
+            </ul> 
+        </nav> 
+        
+    </section>
+    <section class="bg">
+        <div><img class="image" src="shoes.jpg" alt="shoes"></div>
+        <h1 id="Home" >FIND BEST <br>
+            SHOES FOR <br>
+             YOU! </h1>
+             <p>Welcome to Graceful Heights, where we believe that every step<br> you take should be a graceful and confident stride.<br>
+                Our brand is a tribute to the elegance, confidence,<br> and timeless beauty that high heels can bring to your life.</p>
+            
+              <p style="text-align: center;">
+                  <br><a class="button" href="#">Shop Now</a>
+                </p>
+    </section> 
+    
+    <section>
+        <h1 id="Our Products"><strong>OUR PRODUCTS</strong></h1>
+
+        <div class="row">
+            <div class="column">
+                <img src="heels.webp" width="100%">
+                <h3 style="text-align: center; font-size:25px">Rs. 5,000 PKR</h3>
+            </div>
+            <div class="column">
+                <img src="block-heel.jpg" width="100%">
+                <h3 style="text-align: center; font-size:25px">Rs. 3,500 PKR</h3>
+            </div>
+            <div class="column">
+                <img src="pencil-heels.jpg" width="100%">
+                <h3 style="text-align: center; font-size:25px">Rs. 4,000 PKR</h3>
+            </div>
+        </div>
+        <p style="text-align: center; font-size:25px">
+            <br><a class="button" href="#">Explore More</a>
+          </p>
+    </section>
+    
+
+    <section class="about">
+        
+        <h2 id="About Us" ><strong>ABOUT US</strong></h2>
+        <img class="pic" src="bg.png" alt="pic">
+       
+        <p>At Graceful Heights, we're passionate about redefining <br>the world of 
+            fashion with our stunning collection of high heels.<br>
+             We believe that the right pair of heels can not only elevate<br> your height but also your confidence, your style, and your attitude.<br> Our brand is more than just a collection of footwear;
+             it's a celebration of elegance, sophistication, and empowerment.
+        </p><br>
+        <p>Graceful Heights was born from a simple idea: to offer high-quality,<br>stylish high heels that
+            empower individuals to express their <br>unique style and make a statement with every step.<br>
+            We're a team of designers, artisans, and fashion enthusiasts <br>who have come together
+            to create a brand that transcends trends and sets new standards for elegance.
+        </p><br>
+
+        <p>Our mission is to provide you with high heels that don't just make
+         you look stunning but also feel amazing. We're dedicated to crafting footwear 
+         that's comfortable, stylish, and versatile. We want you to wear our heels not
+          just for special occasions but as an essential part of your daily style.</p>
+       </section>
+
+       <section class="servives">
+        <h4 id="Our Services"><strong>OUR SERVICES</strong></h4>
+        <div class="box">
+            <div class="card">
+                <i class="fa-solid fa-truck"></i>
+                <h5>Fast Delievery</h5>
+                <div class="pra">
+                    <p>We understand that you want your high heels promptly.
+                 Enjoy swift and reliable delivery to your doorstep, ensuring you receive your stylish footwear when you need it most.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="card">
+                <i class="fa-regular fa-circle-check"></i>
+                <h5>100% Warranty</h5>
+                <div class="pra">
+                <p> We stand behind the quality of our products. With our 100% warranty, you can shop with confidence,
+                     knowing that your satisfaction and peace of mind are our top priorities.</p> 
+
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="card">
+                <i class="fa-solid fa-headset"></i>
+                <h5>24/7 Support</h5>
+                <div class="pra">
+                <p>Our dedicated support team is available around the clock to assist you with any
+                     inquiries, concerns, or assistance you may need. We're here for you at all hours.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="card">
+                <i class="fa-regular fa-thumbs-up"></i>
+                <h5>Best Quality</h5>
+                <div class="pra">
+                <p>Experience the pinnacle of elegance and comfort with our high-quality high heels. 
+                    Each pair is crafted with precision, using premium materials, and ergonomic design 
+                    to ensure you look and feel amazing with every step.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="card">
+                <i class="fa-solid fa-arrow-rotate-left"></i>
+                <h5>Free Returns</h5>
+                <div class="pra">
+                <p>Your satisfaction is our guarantee. If, for any reason, you're not entirely pleased 
+                    with your purchase, our hassle-free return process ensures you can easily
+                     exchange or return your heels.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="card">
+                <i class="fa-solid fa-lock"></i>
+                <h5>Secure Shopping</h5>
+                <div class="pra">
+                <p>Shop with confidence on our secure platform. Your privacy and data protection 
+                are of utmost importance to us, ensuring a safe and worry-free shopping experience.</p>
+                </div>
+            </div>
+        </div>
+       </section>
+
+       <section class="contact">
+        <h3 id="Contact Us"><strong>CONTACT US </strong></h3>
+        <div class="container">
+            <div class="contact-box">
+                <div class="left"></div>
+                <div class="right">
+                <form>
+                    <input type="text" name="text" placeholder="Full Name" required class="field">
+                    <input type="email" class="field" placeholder="Your Email" required>
+                    <input type="text" class="field" placeholder="Phone Number" required>
+                    <textarea class="field" placeholder="Message"></textarea>
+                    <button class="btn">Send</button>
+                 </form>   
+             </div>
+            </div>
+        </div>
+       </section>
+
+       <section>
+        <footer class="footer-distributed">
+            <img src="Logo.png" style="width: 9%; float:left; margin-right:200px;">
+            
+            <div class="footer-left">
+                <h6>Graceful Heights</h6>
+
+                <p class="footer-links">
+                    <a href="#">Home</a>
+                    |
+                    <a href="#">Our Products</a>
+                    |
+                    <a href="#">About Us</a>
+                    |
+                    <a href="#">Contact Us</a>
+                    
+                </p>
+
+                <p class="footer-brand-name">Copyright &copy; 2023<strong> Graceful Heights</strong>
+                All rights reserved</p>
+            </div>
+
+            <div class="footer-center">
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p><span>Peshawar</span>Pakistan</p>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+92 1234567890</p>
+                </div>
+
+                <div>
+                    <i class="fa-regular fa-envelope"></i>
+                    <p><a href="#">ayeshajamil10502@gmail.com</a></p>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <p class="footer-brand-about">
+                    
+                    <strong>Graceful Heights</strong> is a Brand where you can find high quality and 
+                    stylish heels.
+                </p>
+                <div class="footer-icon">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </footer>
+       </section>
+        
+    
+
+           
+
+       
+
+       
+    </body>
+</html>
